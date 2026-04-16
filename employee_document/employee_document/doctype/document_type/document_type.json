@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "hash",
+ "autoname": "field:type",
  "creation": "2026-04-06 16:27:29.391438",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -31,11 +31,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-06 16:30:39.259871",
+ "modified": "2026-04-15 14:59:54.899058",
  "modified_by": "Administrator",
  "module": "Employee Document",
  "name": "Document Type",
- "naming_rule": "Random",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -54,12 +54,9 @@
  "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
- "search_fields": "type",
  "show_name_in_global_search": 1,
- "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "type",
  "track_changes": 1
 }

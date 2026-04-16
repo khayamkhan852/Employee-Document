@@ -9,6 +9,8 @@
  "field_order": [
   "type",
   "document_number",
+  "notify_before_expiry",
+  "notify_before_days",
   "column_break_mstb",
   "issue_date",
   "expiry_date",
@@ -56,13 +58,27 @@
    "fieldname": "document_copy",
    "fieldtype": "Attach Image",
    "label": "Document Copy"
+  },
+  {
+   "default": "0",
+   "fieldname": "notify_before_expiry",
+   "fieldtype": "Check",
+   "label": "Notify Before Expiry?"
+  },
+  {
+   "depends_on": "eval:doc.notify_before_expiry",
+   "fieldname": "notify_before_days",
+   "fieldtype": "Int",
+   "label": "Notify Before Days",
+   "mandatory_depends_on": "eval:doc.notify_before_expiry",
+   "non_negative": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-04-07 11:18:20.662473",
+ "modified": "2026-04-15 16:22:34.025993",
  "modified_by": "Administrator",
  "module": "Employee Document",
  "name": "Employee Document",

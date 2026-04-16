@@ -158,6 +158,13 @@ fixtures = [
 # Scheduled Tasks
 # ---------------
 
+scheduler_events = {
+	"daily": [
+		"employee_document.background_jobs.expired_document.enqueue_document_expiration_job",
+		"employee_document.background_jobs.expired_document.enqueue_document_before_expiration_job",
+	],
+}
+
 # scheduler_events = {
 # 	"all": [
 # 		"employee_document.tasks.all"
