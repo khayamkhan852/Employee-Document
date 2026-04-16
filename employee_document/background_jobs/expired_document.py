@@ -55,6 +55,8 @@ def create_document_before_expiration():
                     "employee_cell_number": employee_doc.cell_number,
                     "employee_name": employee_doc.employee_name,
                     "employee_number": employee_doc.employee_number,
+                    "notify_before_expiry": employee_document.notify_before_expiry,
+                    "notify_before_days": employee_document.notify_before_days,
                 })            
             
             document_expiration = frappe.get_doc(document_expiration_data).insert(ignore_permissions=True)
@@ -73,9 +75,7 @@ def create_document_expiration():
             "expiry_date",
             "document_number",
             "parent",
-            "parenttype",
-            "notify_before_expiry",
-            "notify_before_days",
+            "parenttype"
         ],
     )
 
@@ -106,9 +106,7 @@ def get_employee_document_expiration(employee_document):
         "expiry_date": employee_document.expiry_date,
         "document_number": employee_document.document_number,
         "reference_doctype": employee_document.parenttype,
-        "reference_name": employee_document.parent,
-        "notify_before_expiry": employee_document.notify_before_expiry,
-        "notify_before_days": employee_document.notify_before_days,
+        "reference_name": employee_document.parent
     }
 
     return document_expiration_data
